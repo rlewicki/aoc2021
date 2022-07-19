@@ -71,7 +71,12 @@ main :: () {
 
 
     boards: [..] Board;
-    defer array_free(boards);
+    defer {
+        for boards {
+            deinit(*it.crossed);
+        }
+        array_free(boards);
+    }
     current_board := array_add(*boards);
     current_board.id = boards.count;
     rows_read := 0;

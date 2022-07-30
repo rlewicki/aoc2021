@@ -19,6 +19,7 @@ main :: () {
     }
 
     risk_points: [..] int;
+    defer array_free(risk_points);
     for y: 0..height-1 {
         for x: 0..width-1 {
             current := char_to_int(input[y][x]);

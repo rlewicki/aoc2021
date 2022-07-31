@@ -25,11 +25,12 @@ main :: () {
         return false;
     }
     
-    stack: [2048] u8;
+    stack: [512] u8;
     stack_pointer := 0;
     score := 0;
     input := split(file, "\r\n");
     for line: input {
+        stack_pointer = 0;
         for i: 0..line.count - 1 {
             if line[i] == #char "(" || 
                line[i] == #char "[" || 

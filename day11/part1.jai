@@ -47,16 +47,6 @@ main :: () {
 
     flashes := 0;
     for i: 0..99 {
-        if i <= 10 {
-            print("\n\n\n");
-            for y: 0..HEIGHT - 1 {
-                for x: 0..WIDTH - 1 {
-                    print("%", octopuses[y][x]);
-                }
-                print("\n");
-            }
-        }
-
         for y: 0..HEIGHT - 1 {
             for x: 0..WIDTH - 1 {
                 octopuses[y][x] += 1;
